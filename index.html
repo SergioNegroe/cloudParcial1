@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal</title>
+</head>
+<body>
+    <h1>Mi nombre:</h1>
+    <p>Sergio Negroe Ruiz</p>
+
+    <h1>Mi matrícula:</h1>
+    <p>00404277</p>
+
+    <h1>Hora actual:</h1>
+    <p id="hora-actual"></p>
+
+    <script>
+        // JavaScript para obtener y mostrar la hora actual
+        function mostrarHoraActual() {
+            const fecha = new Date();
+            const hora = fecha.getHours();
+            const minutos = fecha.getMinutes();
+            const segundos = fecha.getSeconds();
+
+            const horaActual = `${hora}:${minutos}:${segundos}`;
+            document.getElementById("hora-actual").textContent = horaActual;
+        }
+
+        // Llamar a la función para mostrar la hora actual
+        mostrarHoraActual();
+
+        // Actualizar la hora cada segundo
+        setInterval(mostrarHoraActual, 1000);
+    </script>
+</body>
+</html>
